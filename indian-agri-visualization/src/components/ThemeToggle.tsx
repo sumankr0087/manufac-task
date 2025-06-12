@@ -1,17 +1,19 @@
 import { Button } from '@mantine/core';
-import { useTheme } from '../hooks/useTheme';
 
-export const ThemeToggle = () => {
-  const { isDark, toggleTheme } = useTheme();
+interface ThemeToggleProps {
+  toggleTheme: () => void;
+  isDark: boolean;
+}
 
+export const ThemeToggle = ({ toggleTheme, isDark }: ThemeToggleProps) => {
   return (
     <Button 
-  onClick={toggleTheme}
-  className="fixed bottom-4 right-4 z-50"
-  color={isDark ? 'orange' : 'blue'}
->
-  {isDark ? '☀️ Light Mode' : '🌙 Dark Mode'}
-</Button>
-
+      onClick={toggleTheme}
+      className="fixed border rounded-full p-2 cursor-pointer h-[40px] w-[40px] top-4 right-6 z-50"
+      variant="outline"
+      color={isDark ? 'gray' : 'dark'}
+    >
+      {isDark ? '☀️' : '🌙'}
+    </Button>
   );
 };

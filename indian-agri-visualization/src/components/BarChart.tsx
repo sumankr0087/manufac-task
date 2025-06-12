@@ -18,7 +18,7 @@ export const BarChart = ({ data, isDark }: BarChartProps) => {
     if (!chartRef.current) return;
 
     const chart = echarts.init(chartRef.current);
-    
+
     const option = {
       tooltip: {
         trigger: 'axis',
@@ -37,13 +37,28 @@ export const BarChart = ({ data, isDark }: BarChartProps) => {
         data: data.map(item => item.crop),
         axisLabel: {
           rotate: 45,
-          color: isDark ? '#fff' : '#333'
+          color: isDark ? '#f8f9fa' : '#1a1a1a'
+        },
+        axisLine: {
+          lineStyle: {
+            color: isDark ? '#4a5568' : '#e5e7eb'
+          }
         }
       },
       yAxis: {
         type: 'value',
         axisLabel: {
-          color: isDark ? '#fff' : '#333'
+          color: isDark ? '#f8f9fa' : '#1a1a1a'
+        },
+        axisLine: {
+          lineStyle: {
+            color: isDark ? '#4a5568' : '#e5e7eb'
+          }
+        },
+        splitLine: {
+          lineStyle: {
+            color: isDark ? '#4a5568' : '#e5e7eb'
+          }
         }
       },
       series: [
@@ -52,11 +67,11 @@ export const BarChart = ({ data, isDark }: BarChartProps) => {
           type: 'bar',
           data: data.map(item => item.average),
           itemStyle: {
-            color: '#4f46e5'
+            color: isDark ? '#6b46c1' : '#4f46e5'
           }
         }
       ],
-      backgroundColor: isDark ? '#1f2937' : '#fff'
+      backgroundColor: isDark ? '#2d3748' : '#f8f9fa'
     };
 
     chart.setOption(option);
@@ -71,8 +86,8 @@ export const BarChart = ({ data, isDark }: BarChartProps) => {
   }, [data, isDark]);
 
   return (
-    <div className={`p-4 rounded-lg shadow-md ${isDark ? 'bg-gray-800' : 'bg-white'}`}>
-      <h2 className={`text-xl font-bold mb-4 ${isDark ? 'text-white' : 'text-gray-800'}`}>
+    <div className="p-4">
+      <h2 className="text-xl font-bold mb-4 text-black dark:text-black">
         Average Crop Production
       </h2>
       <div ref={chartRef} className="w-full h-[400px]" />
