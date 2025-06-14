@@ -10,7 +10,10 @@ This project visualizes Indian agriculture data from the National Data and Analy
 
 ## Screenshots
 
-![Screenshot of the application showing both table and chart components](./screenshot.png)
+![Screenshot of the application showing table components](./indian-agri-visualization/src/assets/Screenshot%202025-06-14%20at%2012.12.17 PM.png)
+
+
+![Screenshot of the application showing table components](./indian-agri-visualization/src/assets/Screenshot%202025-06-14%20at%2012.12.46 PM.png)
 
 ## Live Demo
 
