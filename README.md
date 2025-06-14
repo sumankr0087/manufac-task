@@ -10,14 +10,15 @@ This project visualizes Indian agriculture data from the National Data and Analy
 
 ## Screenshots
 
+## Table
 ![Screenshot of the application showing table components](./indian-agri-visualization/src/assets/Screenshot%202025-06-14%20at%2012.12.17 PM.png)
 
-
-![Screenshot of the application showing table components](./indian-agri-visualization/src/assets/Screenshot%202025-06-14%20at%2012.12.46 PM.png)
+## Chart
+![Screenshot of the application showing bar components](./indian-agri-visualization/src/assets/Screenshot%202025-06-14%20at%2012.12.46 PM.png)
 
 ## Live Demo
 
-[View deployed application](https://your-vercel-app-url.vercel.app)
+[View deployed application](https://heartfelt-crepe-1c97f1.netlify.app/)
 
 ## Installation
 
