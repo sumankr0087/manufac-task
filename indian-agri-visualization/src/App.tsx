@@ -16,10 +16,10 @@ function App() {
   return (
     <MantineProvider forceColorScheme={isDark ? 'dark' : 'light'}>
       <div className={`min-h-screen p-8 ${isDark ? 'dark' : 'light'}`}>
-      <h1 className="text-3xl font-bold mb-8 text-center dark:text-white">
-  Indian Agriculture Data Visualization
-</h1>
-        
+        <h1 className="text-3xl font-bold mb-8 text-center dark:text-white">
+          Indian Agriculture Data Visualization
+        </h1>
+
         <div className="max-w-6xl mx-auto space-y-8">
           <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
             <CropTable data={tableData} />
